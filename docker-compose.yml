@@ -4,7 +4,7 @@ services:
     build: ./src/app
     image: dash-celery-redis-example:latest
     pull_policy: never
-    command: gunicorn --workers=1 --threads=1 --bind=0.0.0.0:8050 app:server
+    command: gunicorn --workers=4 --bind=0.0.0.0:8050 app:server
     env_file:
       - .env
     environment:
